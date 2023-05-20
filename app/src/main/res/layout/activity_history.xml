@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/my_tickets_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="15dp"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/event_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/location_list_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/back_btn_setting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_radius_red_solid"
+            android:scaleType="center"
+            android:src="@drawable/arrow_left" />
+
+        <ImageButton
+            android:id="@+id/notif_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notification" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/my_tickets_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="150dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/button_main_radius"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/button_main_radius"
+                    android:src="@drawable/avenger" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Avengers: \nEnd Game"
+                        android:textSize="24dp"
+                        android:textColor="@color/imperial_red"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_bold"
+                        android:includeFontPadding="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Genre : "
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Action"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Duration : "
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="3h 10m"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/button_main_radius"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/button_main_radius"
+                    android:src="@drawable/event1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Jelajah \nNusa"
+                        android:textSize="24dp"
+                        android:textColor="@color/imperial_red"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_bold"
+                        android:includeFontPadding="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Genre : "
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Animasi"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Duration : "
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1h 23m"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/button_main_radius"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/button_main_radius"
+                    android:src="@drawable/toy_story4" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Toy Story 4"
+                        android:textSize="24dp"
+                        android:textColor="@color/imperial_red"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_bold"
+                        android:includeFontPadding="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Genre : "
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Animasi"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Duration : "
+                                android:textSize="16dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_medium"
+                                android:includeFontPadding="false"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1h 46m"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

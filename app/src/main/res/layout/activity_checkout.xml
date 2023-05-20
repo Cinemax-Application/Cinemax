@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckoutActivity">
+
+    <RelativeLayout
+        android:id="@+id/checkout_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="horizontal"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/event_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/location_list_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checkout"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"/>
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/back_btn_setting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_radius_red_solid"
+            android:scaleType="center"
+            android:src="@drawable/arrow_left" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/card_checkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkout_header"
+        android:layout_marginHorizontal="40dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="200dp"
+            android:src="@drawable/avenger"
+            android:scaleType="fitCenter"
+            android:background="@drawable/button_main_radius"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avengers: \nEnd Game"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                android:textSize="24dp"/>
+
+            <TextView
+                android:id="@+id/category_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Action, Sci-fi, Fantasy"
+                android:textColor="#4A4B56"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Medellín, Colombia"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:drawableLeft="@drawable/map_pin_white"
+                android:includeFontPadding="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/card_checkout">
+
+        <TextView
+            android:id="@+id/pay_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Payment Method"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="22dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pay_label"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/pay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Credit Card"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="#4A4B56"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/icon_card"
+                    android:drawablePadding="40dp"
+                    android:gravity="center_vertical"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:buttonTint="@color/darker_blue"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@id/pay1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2B2B38"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/pay2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bank Account"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="#4A4B56"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/bank"
+                    android:drawablePadding="35dp"
+                    android:gravity="center_vertical"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:buttonTint="@color/darker_blue"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@id/pay2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2B2B38"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/pay3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Apple Pay"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="#4A4B56"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/apple_pay"
+                    android:drawablePadding="15dp"
+                    android:gravity="center_vertical"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:buttonTint="@color/darker_blue"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@id/pay3"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#2B2B38"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/pay4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Google Pay"
+                    android:textColor="#4A4B56"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/google_pay"
+                    android:drawablePadding="15dp"
+                    android:gravity="center_vertical"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:buttonTint="@color/darker_blue"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_radius_red_solid"
+            android:text="$29.1 | Pay"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="25dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:drawablePadding="10dp"
+            android:includeFontPadding="false"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

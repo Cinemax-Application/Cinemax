@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMovieActivity">
+
+    <RelativeLayout
+        android:id="@+id/detail_movie_header"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/avenger"
+            android:scaleType="centerCrop"
+            android:scrollY="-80dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/linear_bg_top_movie"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/linear_bg_bottom_movie"
+            android:layout_alignParentBottom="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/back_btn_setting"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_radius_red_solid"
+                android:scaleType="center"
+                android:src="@drawable/arrow_left" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_radius_red_solid"
+                android:text="Trailer"
+                android:textSize="20dp"
+                android:drawableLeft="@drawable/play"
+                android:drawablePadding="10dp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:textAllCaps="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/detail_movie_header">
+
+        <LinearLayout
+            android:id="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingVertical="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avengers"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                android:textColor="@color/imperial_red"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Game"
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/imperial_red"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_category"
+            android:layout_below="@+id/detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_main_radius"
+                android:text="Action"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_main_radius"
+                android:text="Science Fiction"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_main_radius"
+                android:text="Fantasy"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/profile_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_category"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="25dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_radius_player_detail"
+                    android:src="@drawable/user1"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_radius_player_detail"
+                    android:src="@drawable/user2"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_radius_player_detail"
+                    android:src="@drawable/user3"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_radius_player_detail"
+                    android:src="@drawable/user4"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_radius_player_detail"
+                    android:src="@drawable/user5"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/border_radius_player_detail"
+                    android:src="@drawable/user6"
+                    android:scaleType="fitCenter"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_below="@+id/profile_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers..."
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/booking_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_radius_red_solid"
+            android:text="Booking"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="25dp"
+            android:layout_marginBottom="25dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:includeFontPadding="false" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

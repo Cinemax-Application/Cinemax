@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Cinemax</string>
+
+    <string-array name="list_location">
+        <item>Lampung</item>
+        <item>Padang</item>
+        <item>Medan</item>
+        <item>Aceh</item>
+        <item>Bengkulu</item>
+        <item>Jakarta</item>
+    </string-array>
+
+    <string-array name="list_country">
+        <item>Indonesia</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

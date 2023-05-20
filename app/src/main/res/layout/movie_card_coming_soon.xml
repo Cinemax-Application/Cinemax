@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            android:layout_height="260dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/image_card_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avenger" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pre_released"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#996F6F6F"
+                    android:text="Release date | Feb, 2023"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/title_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avengers"
+                android:textColor="@color/imperial_red"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:id="@+id/subtitle_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Game"
+                android:textColor="@color/imperial_red"
+                android:textSize="12dp"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

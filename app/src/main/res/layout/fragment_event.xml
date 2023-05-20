@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventFragment">
+
+    <RelativeLayout
+        android:id="@+id/event_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/event_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/location_list_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false" />
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/notif_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/notification" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/event_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="35dp"
+        android:paddingVertical="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_header">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_regular"
+            android:includeFontPadding="false"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/button_main_radius"
+        android:drawableLeft="@drawable/search"
+        android:drawableRight="@drawable/microphone"
+        android:drawablePadding="15dp"
+        android:hint="Search"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_subtitle"
+        android:fontFamily="@font/poppins_regular"
+        android:includeFontPadding="false" />
+
+    <HorizontalScrollView
+        android:id="@+id/filter_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/searchText"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:paddingHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Promotions"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_radius_red_solid"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Events"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_main_radius"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_main_radius"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="News Event"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_main_radius"
+                android:fontFamily="@font/poppins_regular"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/all_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/filter_event">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/button_main_radius"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/button_main_radius"
+                        android:src="@drawable/event1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Jelajah \nNusa"
+                            android:textSize="24dp"
+                            android:textColor="@color/imperial_red"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_bold"
+                            android:includeFontPadding="false" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="$3.99"
+                                android:textSize="24dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                            <ImageButton
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/add_plus"
+                                android:background="@drawable/button_main_radius"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/button_main_radius"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/button_main_radius"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/event2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Police \nMovie Fest"
+                            android:textSize="24dp"
+                            android:textColor="@color/imperial_red"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_bold"
+                            android:includeFontPadding="false" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="$8.99"
+                                android:textSize="24dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:includeFontPadding="false"/>
+
+                            <ImageButton
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/add_plus"
+                                android:background="@drawable/button_main_radius"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

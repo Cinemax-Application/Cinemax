@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThanksActivity">
+
+    <RelativeLayout
+        android:id="@+id/thanks_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="30dp">
+
+        <TextView
+            android:id="@+id/greeting_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='"Thank you for purchasing your movie ticket with us. We hope you enjoy your movie experience."'
+            android:textStyle="bold"
+            android:textSize="22dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="50dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:includeFontPadding="false"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/thanks_container"
+        android:background="@drawable/button_main_radius"
+        android:layout_marginHorizontal="40dp">
+
+        <GridLayout
+            android:id="@+id/info_tickets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="20dp"
+            android:useDefaultMargins="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Avengers"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Game"
+                    android:textSize="12dp"
+                    android:textColor="#4A4B56"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"/>
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7th May, 19:00"
+                    android:textSize="14dp"
+                    android:textColor="#4A4B56"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cinemax"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lampung"
+                    android:textSize="12dp"
+                    android:textColor="#4A4B56"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QW1E0RTY"
+                    android:textSize="12dp"
+                    android:textColor="#4A4B56"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tickets"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="12dp"
+                    android:textColor="#4A4B56"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seating"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B1 - C1 - C2"
+                    android:textSize="12dp"
+                    android:textColor="#4A4B56"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"/>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/container_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/info_tickets"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/circle_gray" />
+
+            <View
+                android:id="@+id/dash_divider"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:background="@drawable/border_dash_gray"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/circle_gray"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/container_divider"
+            android:paddingHorizontal="50dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/code_bars" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="20dp"
+        android:padding="15dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_radius_red_solid"
+            android:text="Return"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="25dp"
+            android:drawableLeft="@drawable/arrow_left"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/poppins_bold"
+            android:includeFontPadding="false"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

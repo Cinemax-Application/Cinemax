@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ComingSoonFragment">
+
+    <RelativeLayout
+        android:id="@+id/main_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/location_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_main_radius"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/location_list_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Cinemax"
+                android:textColor="@color/imperial_red"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:includeFontPadding="false" />
+
+            <Spinner
+                android:id="@+id/location_list"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_list_label"
+                android:backgroundTint="@color/white"
+                android:dropDownWidth="135dp"
+                android:popupBackground="@color/background_primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/location_container"
+            android:gravity="right">
+
+            <ImageButton
+                android:id="@+id/search_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_main_radius"
+                android:src="@drawable/search" />
+
+            <ImageButton
+                android:id="@+id/profile_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/search_btn"
+                android:background="@drawable/button_main_radius"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_profile" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/comingsoon_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
